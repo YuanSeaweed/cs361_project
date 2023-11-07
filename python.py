@@ -10,7 +10,7 @@ data_to_pass_back = 'Send this to node process.'
 
 #Q3. Does this issue also affect those around you? It must be worrying
 
-#Q4. 
+#Q4. Would the people close to you consider this problem more significant than you yourself believe?
 
 #for string input
 #input = sys.argv[1] #should be the character choice
