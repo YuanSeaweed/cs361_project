@@ -1,0 +1,40 @@
+Instructions for Microservice:
+
+When the user selects a character, a file called "char.txt" will be generated with the name of the 
+character they have chosen. The microservice should ask the user a survey of questions to consult  
+them about their problems. The user will have to enter 1-5 for each of the questions, and their 
+answers should be totalled in the program. 
+
+The user will get asked the same type of questions no matter which character they have chosen, but 
+it should at least display the chosen character's name. Later down the road, the questions will be 
+rephrased as if the characters are asking them in their own way. 
+
+Don't do something along the lines of print(characterName + "Have you ever...?"), as the questions should 
+be asked uniquely depending on who the user has chosen.
+
+This can be implemented with a loop that iterates 5 times for each question, but it's not necessarily 
+the only way it can be implemented. Just have a way to display each of the five questions and have the user 
+enter a number 1-5 in the command line to answer. After printing each question, it should also print 
+an answer key as to what 1-5 means to the user.
+
+Finally, the python script should write the total of the numbers the user entered to a file called 
+"result.txt". This will be used for the algorithm in the main program.
+
+The characters you should include are: 
+Sora, Caihong, and Rin
+
+Questions to ask in the program:
+
+#answer key: 1: No, 2: Not really, 3: Not sure, 4: Yeah kinda, 5: Yup
+
+#Q1 First question!
+# Is your problem something you have a hard time talking to others about?
+
+#Q2. Are you having a hard time focusing on things you enjoy, such as your hobbies?
+
+#Q3. Does this issue also affect those around you? It must be worrying
+
+#Q4. Would the people close to you consider this problem more significant than you yourself believe?
+
+#Q5. Have you ever considered taking drastic measures in hopes of getting rid of the issue?
+
