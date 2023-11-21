@@ -39,6 +39,7 @@ function choice() {
 
 function conduct() {
     let character = chooseCharacter();
+    let sum = 0;
 
     // Write the character's name to a file
     fs.writeFile('char.txt', character, (err) => {
@@ -50,7 +51,7 @@ function conduct() {
         console.log(character + " will be asking you questions!");
 
         // Wait for the user to answer questions in the microservice
-        waitForResult();
+        sum = waitForResult();
     });
 }
 
@@ -65,6 +66,10 @@ function waitForResult() {
             resultExists = true;
         }
     } while (!resultExists);
+
+    //store the content of the file.
+    let sum = 0;
+    sum = fs.readFileSync("result.txt", 'utf-8');
 
     if (fs.existsSync("char.txt")) {
         // Delete the file
@@ -81,6 +86,8 @@ function waitForResult() {
     } else {
         console.log(`File result.txt does not exist.`);
     }
+
+    console.log("Sum is: " + sum);
 
     let again;
     let askAnother;
