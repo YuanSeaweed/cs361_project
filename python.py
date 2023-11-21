@@ -12,25 +12,40 @@ data_to_pass_back = 'Send this to node process.'
 
 #Q4. Would the people close to you consider this problem more significant than you yourself believe?
 
+#Q5. Have you ever considered taking drastic measures in hopes of getting rid of the issue?
+
 #for string input
 #input = sys.argv[1] #should be the character choice
 # for int input 
-qNum = int(sys.argv[1])
-character = sys.argv[2]
+# qNum = int(sys.argv[1])
+# character = sys.argv[2]
 
-if qNum == 1:
-    if character == "Alice":
-        print("Alice: First Question!")
-    elif character == "Sora":
-        print("Sora: First Question!")
-elif qNum == 2:
-    print("Second Question!")
-elif qNum == 3:
-    print("Third Question!")
-elif qNum == 4:
-    print("Fourth Question!")
-else:
-    print("Fifth Question")
+inputFile = open('char.txt', 'r', encoding="utf-8")
+character = inputFile.read()
+
+var = 1;
+
+for qNum in range(1,6):
+    if qNum == 1:
+        if character == "Caihong":
+            print("Caihong: First Question!")
+        elif character == "Sora":
+            print("Sora: First Question!")
+        var = input("1: No, 2: Not really, 3: Not sure, 4: Yeah kinda, 5: Yup\n")
+    elif qNum == 2:
+        print("Second Question!")
+    elif qNum == 3:
+        print("Third Question!")
+    elif qNum == 4:
+        print("Fourth Question!")
+    else:
+        print("Fifth Question!")
+
+sum = 30
+
+outputFile = open('result.txt', 'w', encoding="utf-8")
+outputFile.write(str(sum))
+outputFile.close()
 
 #output = data_to_pass_back
 output = 2
