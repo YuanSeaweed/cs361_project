@@ -9,4 +9,5 @@ is the end goal of this microservice.
 
 By using the value at the end of the first text file, we know how many files we need to iterate through. The script iteratively goes 
 through all files and selects one restaurant from each one to be added to outputlist. Finally, all the chosen restaurants are written 
-to a file called output.txt.
+to a file called output.txt. The results are also printed to the command line 
+interface.
