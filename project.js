@@ -66,13 +66,20 @@ function waitForResult() {
         }
     } while (!resultExists);
 
-    //give the user a response. 
     if (fs.existsSync("char.txt")) {
         // Delete the file
         fs.unlinkSync("char.txt");
         console.log(`File char.txt deleted successfully.`);
     } else {
         console.log(`File char.txt does not exist.`);
+    }
+
+    if (fs.existsSync("result.txt")) {
+        // Delete the file
+        fs.unlinkSync("result.txt");
+        console.log(`File result.txt deleted successfully.`);
+    } else {
+        console.log(`File result.txt does not exist.`);
     }
 
     let again;
