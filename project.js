@@ -183,7 +183,7 @@ function rinResponse(sum) {
         console.log("\nRin: ''E-Eh!?! Caihong?! How long have you been listening?!''")
     }
     else if (sum >= 20 && sum <= 25) {
-        console.log("\nRin: ''Listening to you made me realize some things that I'm sure me \nand a lot of people would never be able to fully understand. But always \nremember, you can't give up! Please don't blame yourself for anything, even if you \nthink it's your own fault. Acknowledging our mistakes is one thing, but self-love is really important too! \nAnd if you don't realize that, then at least, know that you are capable \nof being loved! Whether it's me, Caihong, or Sora, we'll always be there with you! Remember that!''")
+        console.log("\nRin: ''Listening to you made me realize some things that I'm sure me \nand a lot of people would never be able to fully understand. But always \nremember, you can't give up! Please don't blame yourself for anything, even if you \nthink it's your own fault. Acknowledging our mistakes is one thing, but self-love is \nreally important too! And if you don't realize that, then at least, know that you are capable \nof being loved! Whether it's me, Caihong, or Sora, we'll always be there with you! \nRemember that!''")
         console.log("\nCaihong: ''Holy cow, she didn't even stutter once. You heard her right though, user. We always gotcha back!''")
         console.log("\nSora: ''Yup, Rin's right. Hang in there bro.''")
         console.log("\nRin: ''H-Hey!! Y-You guys don't have to listen so closely!''")
@@ -236,16 +236,34 @@ function viewCharacters() {
 function latest() {
     console.log("Here are this version's latest features!~\n");
     console.log("Our updates and new features will be made with our users' best interest in mind!");
+    console.log("Version 1.0 --- 12/10/2023");
+    console.log(" - Added three characters! Please welcome Sora Takeuchi, Caihong Li, and Rin Gotou!")
+    console.log(" - Please use the given features to learn more about the Virtual Character Advice Center!")
+    console.log(" - Leave your suggestions in the feedback form as well! We look forward to hearing it!")
     choice();
 }
 
 function aboutPage() {
     console.log("This is our about page!");
+    console.log("Program Author: Zhi Liang")
+    console.log("Survey Microservice Developer: Jonathan Pham")
+    console.log("")
     const r = prompt("Press enter to go back to the menu\n");
     choice();
 }
 
 function feedback() {
+    console.log("Please enter any comments or suggestions in the command line!\n")
+    let feedback = prompt("");
+    feedback = feedback + '\n';
+
+    fs.writeFile('feedback.txt', feedback, (err) => {
+        if (err) {
+            console.error('Error writing to feedback.txt:', err);
+            return;
+        }
+    });
+
     console.log("Thank you for your feedback!");
     const r = prompt("Press enter to go back to the menu\n");
     choice();
